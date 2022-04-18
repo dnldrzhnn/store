@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link rel="preload" href="../static/desktop/icons/icomoon.ttf" as="font" type="font/ttf" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style1.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs__list">
+            <div class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Главная</a>
+            </div>
+            <div class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Оформление заказа</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="container">
+          <form class="form" action="">
+            <div class="form__data data">
+              <div class="form__title data__personalData">Личные данные</div>
+              <div class="data__phone data__cell">
+                <input id="data__phone" class="data__input" type="number" name="phone" required />
+                <label for="data__phone" class="data__label">Телефон</label>
+              </div>
+              <div class="data__email data__cell">
+                <input id="data__email" class="data__input" type="email" name="email" required />
+                <label for="data__email" class="data__label">E-mail</label>
+              </div>
+              <div class="data__name data__cell">
+                <input id="data__name" class="data__input" type="text" name="name" required  />
+                <label for="data__name" class="data__label">ФИО</label>
+              </div>
+              <div class="data__address data__cell">
+                <input id="data__address" class="data__input" type="text" name="address" required 
+                />
+                <label for="data__address" class="data__label">Город, улица, дом</label>
+              </div>
+              <div class="data__house data__cell">
+                <input
+                  id="data__house"
+                  class="data__input"
+                  type="text"
+                  name="house"
+                  required
+                />
+                <label for="data__house" class="data__label">Квартира, офис</label>
+              </div>
+              <select class="data__wayDelivery data__listItem" name="wayDelivery">
+                <option class="data__listItem_item" value="Самовывоз">Самовывоз</option>
+                <option class="data__listItem_item" value="Доставка курьером">Доставка курьером</option>
+              </select>
+              <select class="data__wayPayments data__listItem" name="wayPayments">
+                <option class="data__listItem_item" value="Оплата наличными">Оплата наличными</option>
+                <option class="data__listItem_item" value="Оплата банковской картой">Оплата банковской картой</option>
+              </select>
+              <textarea class="data__input data__bigInput" name="comment" placeholder="Комментарий к заказу"></textarea>
+              <div class="form__title data__delivery">Способ доставки</div>
+              <div class="form__title data__payments">Способ оплаты</div>
+              <div class="data__subtitle data__clarification">
+                Телефон нужен для подтверждения покупки, а на email придут детали заказа
+              </div>
+              <div class="data__subtitle data__agree">
+                Нажимая на кнопку «Оформить заказ», я даю согласие на
+                <a class="data__agree_link" href="#">обработку персональных данных</a>.
+              </div>
+              <div class="data__btn">
+                <button class="data__btn_submit" type="submit">Оформить заказ</button>
+              </div>
+            </div>
+            <div class="form__cart cart">
+              <div class="form__title">Корзина</div>
+              <div class="cartTable">
+                <div class="cartTable__header">
+                  <div class="cartTable__column">Товар</div>
+                  <div class="cartTable__column">Цена</div>
+                  <div class="cartTable__column">Кол-во</div>
+                  <div class="cartTable__column">Сумма</div>
+                  <div class="cartTable__column"></div>
+                </div>
+                <div class="cartTable__body">
+                  <div class="cartTable__cell">
+                    <img class="cartTable__productImage" src="img/hood.png" alt="hood" />
+                    <div class="cartTable__productName">
+                      <a href="#" target="_blank">Шлем LS2-Innocenti OF536 Matt Black</a>
+                    </div>
+                  </div>
+                  <div class="cartTable__cell cartTable__prices">
+                    <div class="cartTable__price">12990 ₽</div>
+                    <div class="cartTable__price_oldPrice">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__switch">
+                    <div class="cartTable__addOrDelete">
+                      <button class="cartTable__delete cartTable__item" type="button">-</button>
+                      <div class="cartTable__sumCell cartTable__item">
+                        <input class="cartTable__sum" type="text" placeholder="1" />
+                      </div>
+                      <button class="cartTable__add cartTable__item" type="button">+</button>
+                    </div>
+                  </div>
+
+                  <div class="cartTable__cell cartTable__totalPrice">
+                    <div class="cartTable__price">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__action">
+                    <button class="cartTable__btn_deleteProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Удалить</span>
+                        <img class="cartTable__btns_icon" src="img/delete.svg" alt="" />
+                      </div>
+                    </button>
+                    <button class="cartTable__btn_returnProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Товар удален, восстановить</span>
+                        <img class="cartTable__btns_icon" src="img/return.svg" alt="" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cartTable__body">
+                  <div class="cartTable__cell">
+                    <img class="cartTable__productImage" src="img/hood.png" alt="hood" />
+                    <div class="cartTable__productName">
+                      <a href="#" target="_blank">Шлем LS2-Innocenti OF536 Matt Black</a>
+                    </div>
+                  </div>
+                  <div class="cartTable__cell cartTable__prices">
+                    <div class="cartTable__price">12990 ₽</div>
+                    <div class="cartTable__price_oldPrice">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__switch">
+                    <div class="cartTable__addOrDelete">
+                      <button class="cartTable__delete cartTable__item" type="button">-</button>
+                      <div class="cartTable__sumCell cartTable__item">
+                        <input class="cartTable__sum" type="text" placeholder="1" />
+                      </div>
+                      <button class="cartTable__add cartTable__item" type="button">+</button>
+                    </div>
+                  </div>
+
+                  <div class="cartTable__cell cartTable__totalPrice">
+                    <div class="cartTable__price">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__action">
+                    <button class="cartTable__btn_deleteProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Удалить</span>
+                        <img class="cartTable__btns_icon" src="img/delete.svg" alt="" />
+                      </div>
+                    </button>
+                    <button class="cartTable__btn_returnProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Товар удален, восстановить</span>
+                        <img class="cartTable__btns_icon" src="img/return.svg" alt="" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="cartTable__body deleted">
+                  <div class="cartTable__cell">
+                    <img class="cartTable__productImage" src="img/hood.png" alt="hood" />
+                    <div class="cartTable__productName">
+                      <a href="#" target="_blank">Шлем LS2-Innocenti OF536 Matt Black</a>
+                    </div>
+                  </div>
+                  <div class="cartTable__cell cartTable__prices">
+                    <div class="cartTable__price">12990 ₽</div>
+                    <div class="cartTable__price_oldPrice">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__switch">
+                    <div class="cartTable__addOrDelete">
+                      <button class="cartTable__delete cartTable__item" type="button">-</button>
+                      <div class="cartTable__sumCell cartTable__item">
+                        <input class="cartTable__sum" type="text" placeholder="1" />
+                      </div>
+                      <button class="cartTable__add cartTable__item" type="button">+</button>
+                    </div>
+                  </div>
+                  <div class="cartTable__cell cartTable__totalPrice">
+                    <div class="cartTable__price">12990 ₽</div>
+                  </div>
+                  <div class="cartTable__cell cartTable__action">
+                    <button class="cartTable__btn_deleteProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Удалить</span>
+                        <img class="cartTable__btns_icon" src="img/delete.svg" alt="" />
+                      </div>
+                    </button>
+                    <button class="cartTable__btn_returnProduct cartTable__btns">
+                      <div class="cartTable__btn_box">
+                        <span>Товар удален, восстановить</span>
+                        <img class="cartTable__btns_icon" src="img/return.svg" alt="" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__total">
+              В корзине <span class="form__total-bold">2</span> товара на сумму
+              <span class="form__total-bold">7 500 ₽</span><span class="form__total-possiblePrice">12 500 ₽</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
